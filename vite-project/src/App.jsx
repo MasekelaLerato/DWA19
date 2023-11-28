@@ -1,15 +1,14 @@
-import { useState } from 'react'
+//import React from 'react';
+import './App.css';
+import PodcastList from './components/podcastList';
 
-import './App.css'
 
 function App() {
- 
-
   return (
-    <>
-     
-    </>
-  )
+    <div>
+  <PodcastList />
+</div>
+  );
 }
 
-export default App
+export default App;
