@@ -4,11 +4,12 @@ import Homepage from './components/homepage';
 
 
 
+
 function App() {
   return (
     <div>
-    
-      <Homepage />
+    <Homepage  />
+      
     </div>
   );
 }
