@@ -12,12 +12,16 @@
   color: rgba(255, 255, 255, 0.87);
 } 
 
-
+/* the homepage app styles */
+.main--heading{
+margin: 10px;
+}
 .podcasts{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap:15px;
   background-color: #bf5454;
+  margin-top: 20px;
 
 }
 .podcast--title{
@@ -36,7 +40,7 @@
  height: auto;
  } 
 
- 
+ /* preview syles */
  
  .show--preview {
   position: fixed;
@@ -71,8 +75,50 @@ border-color: #bf5454;
   color: black;
 }
 
-.preview--description {
- 
+/* search field */
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  justify-content: flex-end; /* This aligns the content to the far right */
+  position: relative;
+  max-width: 190px;
+  margin-left: auto;
  
   
+  
 }
+
+.input {
+   margin-left: 10px;
+  height: 30px;
+  line-height: 28px;
+  padding: 0 1rem;
+  width: 100%;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.87);
+  color: #0d0c22;
+  box-shadow: 0 0 5px #cb4949, 0 0 0 10px #f5f5f5eb;
+  transition: .3s ease;
+}
+
+.input::placeholder {
+  color: #777;
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  fill: #777;
+  width: 1rem;
+  height: 1rem;
+}
+
+
+
+
+
+
