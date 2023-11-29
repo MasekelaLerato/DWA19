@@ -1,13 +1,15 @@
-//import React from 'react';
+//import  { useEffect } from 'react';
 import './App.css';
-import PodcastList from './components/podcastList';
+import Homepage from './components/homepage';
+
 
 
 function App() {
   return (
     <div>
-  <PodcastList />
-</div>
+    
+      <Homepage />
+    </div>
   );
 }
 
