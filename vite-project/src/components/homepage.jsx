@@ -1,14 +1,26 @@
 import  { useEffect, useState } from 'react';
 
+
+/**
+ * Homepage component displaying a list of podcast shows
+ * @returns {JSX.Element} - The rendered Hompage component
+ */
 export default function Homepage() {
-  const [shows, setShows] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [showPreview, setShowPreview] = useState(null);
+  const [shows, setShows] = useState([]); //State hook to manage the list of podcast shows.
+  const [isLoading, setIsLoading] = useState(true);// State hook to track the loading status of the component
+  const [showPreview, setShowPreview] = useState(null); // State hook to manage the currently previewed show.
 
   useEffect(() => {
     getData();
   }, []);
 
+  
+  /**
+   * Fetches podcast show data from the API 
+   * @async
+   * @function
+   * @returns {promise<void>} - A promise that resolves once the data is fetched and processed
+   */
   const getData = async () => {
     try {
       const response = await fetch('https://podcast-api.netlify.app/shows');
@@ -21,7 +33,11 @@ export default function Homepage() {
     }
   };
 
-  // Function to toggle the display of the podcast preview
+  /**
+   * Toggle the display if the podcast preview
+   * @param {object} show- The podcast show object
+   * @returns {void}
+   */
   const togglePreview = (show) => {
     setShowPreview(show);
   };
