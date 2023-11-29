@@ -26,4 +26,5 @@ export default function Sort({ onSortChange }) {
 
 Sort.propTypes = {
     onSortChange: PropTypes.func.isRequired,
-}
+  };
+  

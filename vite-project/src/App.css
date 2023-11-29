@@ -5,7 +5,7 @@
 }
 
 :root {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 400;
   color-scheme: light dark;
    background: rgb(201, 46, 46); 
@@ -22,6 +22,7 @@ margin: 10px;
   grid-gap:15px;
   background-color: #bf5454;
   margin-top: 20px;
+  padding: 10px;
 
 }
 .podcast--title{
@@ -116,6 +117,8 @@ border-color: #bf5454;
   width: 1rem;
   height: 1rem;
 }
+
+
 
 
 
