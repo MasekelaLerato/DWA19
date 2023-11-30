@@ -1,6 +1,6 @@
 import React from "react";
- import ShowDescription from "./description";
-import ShowSeasons from "./showSeasons";
+ import ShowDescription from "./preview";
+import ShowSeasons from "./seasons";
 
 export default function Carousel() {
     const [carousel, setCarousel] = React.useState([])

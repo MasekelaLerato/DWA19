@@ -43,7 +43,7 @@ margin: 10px;
 
  /* preview syles */
  
- .show--preview {
+ .preview {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -64,13 +64,29 @@ margin: 10px;
  
 }
 
-.preview--button{
-  margin-top: 10px;
-background-color: rgb(113, 14, 14);
-border-color: #bf5454;
-
-
+.preview--btns{
+  padding: 3px;
+  margin: 20px;
 }
+.read-more--btn{
+  padding: 2px;
+  margin: 5px;
+  background-color: rgb(173, 8, 8);
+}
+
+.close--btn{
+  padding: 2px;
+  margin: 5px;
+  background-color: rgb(173, 8, 8);
+}
+
+
+.seasons--btn{
+  padding: 2px;
+  margin: 5px;
+  background-color: rgb(173, 8, 8);
+}
+
 
 .preview--title{
   color: black;

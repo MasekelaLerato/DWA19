@@ -1,6 +1,6 @@
 import  { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+// import Carousel from "./components/carousel";
 import "./App.css";
 import LoginPage from "./components/login";
 import Homepage from "./components/homepage";
@@ -24,6 +24,7 @@ const App = () => {
 
   return (
     <div>
+      {/* <Carousel/> */}
           <Router>
       <Routes>
         <Route path="/" element={<LoginPage />} />

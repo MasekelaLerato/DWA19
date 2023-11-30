@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Sort from './sort';
 import Search from './search';
-import ShowSeasons from './showSeasons';
-import ShowDescription from './description'; // Make sure to import ShowDescription
+import ShowSeasons from './seasons';
+import ShowDescription from './preview'; // Make sure to import ShowDescription
+import Carousel from './carousel';
 
 export default function Homepage() {
   const [shows, setShows] = useState([]);
@@ -63,6 +64,8 @@ export default function Homepage() {
 
   return (
     <div>
+<Carousel/>
+
       <h1 className="main--heading">Podcast Chronicles</h1>
 
       <div>
