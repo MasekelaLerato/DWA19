@@ -56,9 +56,9 @@ export default function Homepage() {
     setShowPreview(null);
   };
 
-  const toggleSeasonId = (itemId) => {
-    // Your logic for toggling the season ID
-    console.log(`Toggle season ID for item with ID: ${itemId}`);
+  const toggleSeasonId = (item) => {
+    setSeasonButton(item)
+    setOpenDialog(true)
   };
 
   return (
@@ -92,12 +92,13 @@ export default function Homepage() {
             showSeasons={() => toggleSeasonId(showPreview.id)}
           />
         )}
+       
 
-        {openDialog && (
+{openDialog && (
           <ShowSeasons
-            seasonId={seasonButton}
-            openDialog={openDialog}
-            onClose={onCloseDialog}
+        seasonId={seasonButton}
+        openDialog={openDialog}
+        onClose={onCloseDialog}
           />
         )}
       </div>

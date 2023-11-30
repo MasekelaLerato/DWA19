@@ -1,6 +1,6 @@
 import  { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./components/login.css";
+
 import "./App.css";
 import LoginPage from "./components/login";
 import Homepage from "./components/homepage";
@@ -24,13 +24,12 @@ const App = () => {
 
   return (
     <div>
-    <Homepage/>
-    <Router>
+          <Router>
       <Routes>
-        <Route path="/*" element={<LoginPage />} />
-        {/* <Route path="/*" element={<Homepage />} /> */}
+        <Route path="/" element={<LoginPage />} />
       </Routes>
     </Router>
+    <Homepage/>
     </div>
   );
 };
