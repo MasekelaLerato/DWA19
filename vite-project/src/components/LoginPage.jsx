@@ -1,13 +1,12 @@
-import  { useEffect } from "react";
+import { useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useNavigate } from "react-router-dom";
 
-const supabaseUrl = "https://xphfzbgkfnddjxmlmnfv.supabase.co";
-const supabaseKey =  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhwaGZ6YmdrZm5kZGp4bWxtbmZ2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDAzOTMwNDgsImV4cCI6MjAxNTk2OTA0OH0.hwYLwkvNuxnBGRnnHBN9v3LwaILv-cMHIaAiLCE7ruM"
-
-  
+// Supabase configuration
+const supabaseUrl = "https://qpqidrvpikiaelnmngcc.supabase.co";
+const supabaseKey = "YOUR_SUPABASE_KEY"; // Replace with your actual Supabase key
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export function LoginPage() {
@@ -37,7 +36,7 @@ export function LoginPage() {
       []
     );
 
-    // Clean up the listener when the component unmounts
+    // Cleanup the authListener subscription on component unmount
     return () => {
       // Check if the `authListener` has the `unsubscribe` method before calling it
       if (authListener && authListener.unsubscribe) {
@@ -46,16 +45,10 @@ export function LoginPage() {
     };
   }, [navigate]);
 
-//   const handleLogout = async () => {
-//     await supabase.auth.signOut();
-//     // Optionally, you can perform additional actions after the user is signed out
-//     console.log("User signed out");
-//     navigate("/");
-//   };
-
   return (
     <div>
       <header>
+        {/* Supabase Auth component */}
         <Auth
           supabaseClient={supabase}
           appearance={{ theme: ThemeSupa }}

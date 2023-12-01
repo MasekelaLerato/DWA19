@@ -13,7 +13,7 @@
 } 
 
 /* the homepage app styles */
-.main--heading{
+.header{
 margin: 10px;
 }
 .podcasts{
@@ -36,6 +36,13 @@ margin: 10px;
    justify-content: center;
    text-align: center;
  }
+
+ .show-item > img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
  .show--item > img{
  max-width: 100%;
  height: auto;
@@ -57,12 +64,21 @@ margin: 10px;
 
 }
 
-.preview--image {
+.preview-image {
   height: auto;
-  width: 40%; 
+  width: 40%; /* Adjust the width as needed */
   margin-top: 10px;
  
 }
+.preview-description {
+  margin: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  font-size: 13px;
+  color: white;
+}
+
+
 
 .preview--btns{
   padding: 3px;
@@ -92,7 +108,7 @@ margin: 10px;
   color: black;
 }
 
-/* search field */
+/* search field styles */
 .group {
   display: flex;
   line-height: 28px;
@@ -101,10 +117,7 @@ margin: 10px;
   position: relative;
   max-width: 190px;
   margin-left: auto;
- 
-  
-  
-}
+ }
 
 .input {
    margin-left: 10px;
@@ -162,5 +175,53 @@ margin: 10px;
   height: 200px;
 
 }
+
+/* Sorting Styles */
+.sort {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+
+.searchbtn, 
+.search-button {
+   display: flex; 
+  justify-content: center;
+  align-items: center;
+ background: linear-gradient(
+  );
+  box-shadow: 0px 12px 24px -1px rgba(0, 0, 0, 0.18);
+  border-color: rgba(7, 4, 14, 0);
+  border-radius: 50px;
+  block-size: 5px;
+  padding: 18px 15px;
+  
+}
+
+.sort {
+color: rgb(245, 217, 213);
+}
+
+
+/* Show Seasons CSS Styles */
+ .season-details {
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and opacity as needed */
+  z-index: 9999;
+  height: 88%; /* Adjust the height as needed */
+  width: 60%; /* Adjust the width as needed */
+  position: fixed;
+  top: 50px; /* Adjust the top position to leave space for the navbar */
+  overflow-y: scroll;
+  color: white;
+  margin-top: 20px; /* Add some top margin to push it down */
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(20px); /* Adjust the blur amount as needed */
+  border-radius: 0.7rem;
+} 
+
+
 
 
