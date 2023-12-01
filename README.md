@@ -1,4 +1,4 @@
-# Book Connect App
+# Podcast App
 
 Podcast Chronicles is your go to app for discovering and enjoying podcasts.Listen to episodes,add favorites, and explore a variety a of captivating show-all in one place" />
 
