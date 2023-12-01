@@ -1,6 +1,6 @@
 import React from "react";
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import Favorites from "./favorites";
+import Favorites from "./Favorites";
 import Description from "./Description";
 import Carousel from "./Carousel";
 import Seasons from "./Seasons";
@@ -19,6 +19,7 @@ export default function Homepage() {
   const [showPreview, setShowPreview] = React.useState(false);
   const [seasonButton, setSeasonButton] = React.useState(null);
   const [openDialog, setOpenDialog] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true); // Added loading state
 
   // Fetch shows from the API on component mount
   React.useEffect(() => {
@@ -27,9 +28,19 @@ export default function Homepage() {
 
   // Fetch shows from the API
   const fetchShows = async () => {
-    const response = await fetch("https://podcast-api.netlify.app/shows");
-    const data = await response.json();
-    setShows(data);
+    try {
+      const response = await fetch("https://podcast-api.netlify.app/shows");
+      if (!response.ok) {
+        throw new Error("Failed to fetch shows.");
+      }
+      const data = await response.json();
+      setShows(data);
+    } catch (error) {
+      console.error(error.message);
+    } finally {
+      // Set loading state to false once data is fetched (whether successful or not)
+      setIsLoading(false);
+    }
   };
 
   // Show preview of a selected podcast
@@ -69,7 +80,6 @@ export default function Homepage() {
     });
     setShows(sortedShows);
   }
-  
 
   // Handle search results to filter the list of podcasts
   const handleSearchResults = (results) => {
@@ -98,6 +108,9 @@ export default function Homepage() {
       <div className="sort">
         <Sort onSortChange={handleSortChange} />
       </div>
+
+      {/* Display loading message while data is being fetched */}
+      {isLoading && <p>Loading...</p>}
 
       {/* Carousel of podcast images */}
       <div>
