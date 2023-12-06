@@ -1,7 +1,6 @@
 # Podcast App
 
-Podcast Chronicles is your go to app for discovering and enjoying podcasts.Listen to episodes,add favorites, and explore a variety a of captivating show-all in one place" />
-
+Podcast Chronicles is your go to app for discovering and enjoying podcasts.Listen to episodes,add favorites, and explore a variety a of captivating show-all in one place
 ## About
 
 This is my capstone project for Dynamic Web Apps at  [CodeSpace](https://www.codespace.co.za/), where I had the opportunity to learn and apply web development skills.
